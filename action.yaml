@@ -93,34 +93,7 @@ outputs:
     description: 'Expiration as a string'
   expiration_timestamp:
     description: 'Expiration as a UNIX timestamp'
-runs:
-  using: 'docker'
-  image: 'docker://uffizzi/cli:v1'
-  args:
-    - 'preview'
-    - 'create'
-    - '--output=github-action'
-    - '--set-labels=github.ref=${{ inputs.github-ref }} github.repository=${{ inputs.github-repository }} github.event.number=${{ inputs.github-event-number }}'
-    - ${{ inputs.compose-file }}
-  env:
-    UFFIZZI_PASSWORD: ${{ inputs.password }}
-    UFFIZZI_SERVER: ${{ inputs.server }}
-    UFFIZZI_USER: ${{ inputs.username }}
-    UFFIZZI_PROJECT: ${{ inputs.project }}
-    GITHUB_USERNAME: ${{ inputs.ghcr-username }}
-    GITHUB_ACCESS_TOKEN: ${{ inputs.ghcr-access-token }}
-    REQUEST_TOKEN: ${{ inputs.request-token}}
-    REQUEST_TOKEN_URL: ${{ inputs.request-token-url }}
-    DOCKERHUB_USERNAME: ${{ inputs.dockerhub-username }}
-    DOCKERHUB_PASSWORD: ${{ inputs.dockerhub-password}}
-    ACR_USERNAME: ${{ inputs.acr-username }}
-    ACR_PASSWORD: ${{ inputs.acr-password }}
-    ACR_REGISTRY_URL: ${{ inputs.acr-registry-url }}
-    AWS_ACCESS_KEY_ID: ${{ inputs.aws-access-key-id }}
-    AWS_SECRET_ACCESS_KEY: ${{ inputs.aws-secret-access-key }}
-    AWS_REGISTRY_URL: ${{ inputs.aws-registry-url }}
-    GCLOUD_SERVICE_KEY: ${{ inputs.gcloud-service-key }}
-    DOCKER_REGISTRY_USERNAME: ${{ inputs.docker-registry-username }}
-    DOCKER_REGISTRY_PASSWORD: ${{ inputs.docker-registry-password }}
-    DOCKER_REGISTRY_URL: ${{ inputs.docker-registry-url }}
 
+runs:
+  using: 'node16'
+  main: 'index.js'

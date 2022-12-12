@@ -1,0 +1,34 @@
+{
+  "name": "preview-action",
+  "version": "3.0.0",
+  "description": "GitHub Action to preview pull requests before merging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UffizziCloud/preview-action.git"
+  },
+  "keywords": [
+    "docker",
+    "kubernetes",
+    "actions",
+    "ephemeral",
+    "environments",
+    "continuous-previews",
+    "continuous-integration",
+    "continuous-delivery",
+    "docker-compose"
+  ],
+  "author": "Adam Vollrath <adam.d.vollrath@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/UffizziCloud/preview-action/issues"
+  },
+  "homepage": "https://github.com/UffizziCloud/preview-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
